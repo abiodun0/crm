@@ -1,0 +1,10 @@
+<a class="btn btn-default btn-sm" ui-sref="dashboard.home"> Back </a>
+<div class="panel panel-default" draggable>
+    <div class="panel-heading">Top Sales For Each sales Men <span class="glyphicon glyphicon-refresh pull-right" ng-click="update('totolSalesMen')">
+
+            </span></div>
+    <div class="panel-body">
+        <canvas class="chart chart-pie" chart-data="salesMenData" chart-labels="salesMenLabel">
+        </canvas>
+    </div>
+</div>

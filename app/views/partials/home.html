@@ -1,0 +1,72 @@
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="panel panel-default" draggable>
+                <div class="panel-heading"><a  ui-sref="dashboard.totalSales">Top Sales Per Month </a><span class="glyphicon glyphicon-refresh pull-right"
+                ng-click="update('totalSales')">
+
+            </span>&nbsp;&nbsp;<span class="glyphicon glyphicon-remove pull-right" style="color:red"></span></div>
+                <div class="panel-body">
+                    <canvas resizer="vertical" class="chart chart-bar" chart-data="salesData" chart-labels="salesLabel">
+                    </canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="panel panel-default" draggable>
+                <div class="panel-heading"><a  ui-sref="dashboard.totalSalesMen">Top Sales For Each sales Men</a> <span class="glyphicon glyphicon-refresh pull-right" ng-click="update('totolSalesMen')">
+
+            </span>&nbsp;&nbsp;<span class="glyphicon glyphicon-remove pull-right" style="color:red"></span></div>
+                <div class="panel-body">
+                    <canvas class="chart chart-pie" chart-data="salesMenData" chart-labels="salesMenLabel">
+                    </canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="panel panel-default" draggable>
+                <div class="panel-heading"><a  ui-sref="dashboard.topFiveOrders">Top 5 sales orders</a> <span class="glyphicon glyphicon-refresh pull-right"
+                ng-click="update('topFiveSalesMen')">
+
+            </span>&nbsp;&nbsp;<span class="glyphicon glyphicon-remove pull-right" style="color:red"></span></div>
+                <table class="table table-condensed">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Sales</th>
+                        </tr>
+                    </thead>
+                    <tbody ng-repeat="salesMan in topSalesMen">
+                        <tr>
+                            <td>{{salesMan[0]}}</td>
+                            <td>{{salesMan[1]}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="panel panel-default" draggable>
+                <div class="panel-heading"><a  ui-sref="dashboard.topFiveSalesMen">Top  5 sales men</a>
+                  <span class="glyphicon glyphicon-refresh pull-right"
+                  ng-click="update('topFiveOrders')"></span>&nbsp;&nbsp;
+                  <span class="glyphicon glyphicon-remove pull-right"style="color:red">
+                  </span></div>
+                <table class="table table-condensed">
+                    <thead>
+                        <tr>
+                            <th>#Order Number</th>
+                            <th>Username</th>
+                            <th>Value</th>
+                        </tr>
+                    </thead>
+                    <tbody ng-repeat="topSales in topSalesOrders | orderBy:'-value'">
+                        <tr>
+                            <td>{{topSales.orderNum}}</td>
+                            <td>{{topSales.userName}}</td>
+                            <td>{{topSales.value}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,21 @@
+body {
+  padding: 0;
+}
+.login{
+  transform:translateY(50%);
+}
+#js-navbar-collapse > div{
+  padding: 15px;
+}
+.panel-heading span{
+  padding: 0 15px;
+}
+
+/* Custom page footer */
+.footer {
+  position: fixed;
+  bottom: 0;
+  padding-top: px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}

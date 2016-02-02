@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+
+<head>
+    <base href="/">
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/angular-chart.js/dist/angular-chart.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+</head>
+
+<body ng-app="crmApp">
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <!-- Add your site or application content here -->
+    <ui-view></ui-view>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Privacy Policy and Terms of Use</h4>
+                </div>
+                <div class="modal-body">
+                    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="support" tabindex="-1" role="dialog" aria-labelledby="support">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Support</h4>
+                </div>
+              <form role="form" method="post" id="contactus-form">
+
+                <div class="modal-body">
+
+                        <input type="hidden" name="csrfmiddlewaretoken" value="6dhiMZElluiYqSwKK8UORt0FGSDejjJU">
+                        <div class="form-group">
+                            <label class="control-label  " for="id_name">Name</label>
+                            <div class=" ">
+                                <input autocomplete="off" class=" form-control" id="id_name" maxlength="100" name="name" placeholder="Enter fullname" type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label  " for="id_email">Email Address</label>
+                            <div class=" ">
+                                <input autocomplete="off" class=" form-control" id="id_email" maxlength="100" name="email" placeholder="john.doe@example.com" type="email">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label  " for="id_subject">Subject</label>
+                            <div class=" ">
+                                <input autocomplete="off" class=" form-control" id="id_subject" maxlength="100" name="subject" placeholder="Please give a title to your message" type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label  " for="id_message">Message</label>
+                            <div class=" ">
+                                <textarea class=" form-control" cols="40" id="id_message" name="message" placeholder="Please enter your message here" rows="10"></textarea>
+                            </div>
+                        </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+                 </form>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <ul class="nav nav-pills">
+                <li role="presentation"><a href="#" data-toggle="modal" data-target="#myModal">Privacy Policy</a></li>
+                <li role="presentation"><a href="#" data-toggle="modal" data-target="#myModal">Terms Of Use</a></li>
+                <li role="presentation"><a href="#" data-toggle="modal" data-target="#support">Support</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/Chart.js/Chart.js"></script>
+    <script src="bower_components/angular-chart.js/dist/angular-chart.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/app.run.js"></script>
+    <script src="scripts/app.config.js"></script>
+    <script src="scripts/config.router.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/dashboard.js"></script>
+    <script src="scripts/directives/draggable.js"></script>
+    <script src="scripts/services/sales.js"></script>
+    <script src="scripts/services/user.js"></script>
+    <!-- endbuild -->
+    <script>
+    $(document).ready(function(){
+      $("#contactus-form").submit(function(e){
+        console.log("submited");
+        e.preventDefault();
+        $(this).find('.modal-body').html('<p class="text-center"> Request Sent Successfully</p>');
+      });
+      setTimeout(function(){
+        $('.btn-default').trigger('click');
+      }, 2000);
+    });
+
+    </script>
+</body>
+
+</html>

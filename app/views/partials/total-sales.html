@@ -1,0 +1,10 @@
+<a class="btn btn-default btn-sm" ui-sref="dashboard.home"> Back </a>
+<div class="panel panel-default" draggable>
+    <div class="panel-heading">Top Sales Per Month<span class="glyphicon glyphicon-refresh pull-right" ng-click="update('totalSales')">
+
+            </span></div>
+    <div class="panel-body">
+        <canvas class="chart chart-bar" chart-data="salesData" chart-labels="salesLabel">
+        </canvas>
+    </div>
+</div>
