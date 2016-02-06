@@ -10,7 +10,7 @@
 angular.module('crmApp')
   .service('user', ['$http', '$rootScope','$state', function($http, $rootScope, $state) {
     this.login = function(loginform) {
-      $rootScope.errorMessage = '';
+    $rootScope.errorMessage = '';
     $http({
       url: 'http://localhost:8080/login',
       method: 'GET',
